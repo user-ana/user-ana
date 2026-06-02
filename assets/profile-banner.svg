@@ -1,17 +1,22 @@
-<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
-      <stop offset="55%" stop-color="#0ea5e9" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    <radialGradient id="spaceGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.28"/>
+      <stop offset="42%" stop-color="#111827" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="1"/>
     </radialGradient>
-    <linearGradient id="line" x1="0" y1="0" x2="1200" y2="0">
+    <radialGradient id="planet" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="25%" stop-color="#38bdf8"/>
+      <stop offset="60%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </radialGradient>
+    <linearGradient id="scanLine" x1="0" y1="0" x2="1200" y2="0">
       <stop stop-color="#22d3ee" stop-opacity="0"/>
-      <stop offset="0.45" stop-color="#22d3ee"/>
-      <stop offset="0.55" stop-color="#38bdf8"/>
+      <stop offset="0.5" stop-color="#22d3ee" stop-opacity="0.85"/>
       <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
     </linearGradient>
-    <filter id="softGlow">
+    <filter id="glow">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
@@ -22,94 +27,99 @@
       .title {
         font-family: "Segoe UI", Arial, sans-serif;
         font-size: 62px;
-        font-weight: 800;
-        letter-spacing: 8px;
-        fill: #e0f2fe;
-        filter: url(#softGlow);
+        font-weight: 900;
+        letter-spacing: 9px;
+        fill: #f8fafc;
+        filter: url(#glow);
       }
       .subtitle {
-        font-family: "Segoe UI", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: 7px;
-        fill: #7dd3fc;
+        font-family: "Consolas", "Courier New", monospace;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 6px;
+        fill: #67e8f9;
       }
       .tiny {
         font-family: "Consolas", "Courier New", monospace;
         font-size: 14px;
         fill: #94a3b8;
-        letter-spacing: 4px;
+        letter-spacing: 3px;
       }
-      .scan {
-        animation: scan 5s ease-in-out infinite;
-      }
-      .pulse {
-        animation: pulse 3s ease-in-out infinite;
-      }
-      .float {
-        animation: float 6s ease-in-out infinite;
-      }
-      .blink {
-        animation: blink 1.2s steps(2) infinite;
-      }
-      @keyframes scan {
-        0%, 100% { transform: translateX(-260px); opacity: 0; }
-        20%, 80% { opacity: 1; }
-        50% { transform: translateX(260px); opacity: 0.9; }
-      }
-      @keyframes pulse {
-        0%, 100% { opacity: 0.45; }
-        50% { opacity: 1; }
-      }
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-      }
-      @keyframes blink {
-        0%, 45% { opacity: 1; }
-        46%, 100% { opacity: 0; }
-      }
+      .orbit { animation: orbit 18s linear infinite; transform-origin: 935px 210px; }
+      .orbitReverse { animation: orbit 26s linear infinite reverse; transform-origin: 935px 210px; }
+      .pulse { animation: pulse 2.8s ease-in-out infinite; }
+      .scan { animation: scan 5.5s ease-in-out infinite; }
+      .float { animation: float 6s ease-in-out infinite; }
+      .twinkleA { animation: twinkle 2.2s ease-in-out infinite; }
+      .twinkleB { animation: twinkle 3.1s ease-in-out infinite; }
+      .blink { animation: blink 1s steps(2) infinite; }
+      @keyframes orbit { to { transform: rotate(360deg); } }
+      @keyframes pulse { 0%,100% { opacity: .42; } 50% { opacity: 1; } }
+      @keyframes scan { 0%,100% { transform: translateX(-520px); opacity: 0; } 18%,82% { opacity: 1; } 50% { transform: translateX(520px); opacity: .9; } }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+      @keyframes twinkle { 0%,100% { opacity: .25; } 50% { opacity: 1; } }
+      @keyframes blink { 0%,45% { opacity: 1; } 46%,100% { opacity: 0; } }
     </style>
   </defs>
 
-  <rect width="1200" height="360" rx="22" fill="#020617"/>
-  <rect x="1" y="1" width="1198" height="358" rx="22" stroke="#1e293b" stroke-width="2"/>
-  <circle cx="260" cy="94" r="180" fill="url(#glowA)" class="float"/>
-  <circle cx="940" cy="250" r="210" fill="url(#glowA)" class="float"/>
+  <rect width="1200" height="420" rx="26" fill="#020617"/>
+  <rect width="1200" height="420" rx="26" fill="url(#spaceGlow)"/>
+  <rect x="1.5" y="1.5" width="1197" height="417" rx="24.5" stroke="#1e293b" stroke-width="3"/>
 
-  <g opacity="0.28">
-    <path d="M120 72H1080" stroke="#0f172a" stroke-width="1"/>
-    <path d="M120 118H1080" stroke="#0f172a" stroke-width="1"/>
-    <path d="M120 164H1080" stroke="#0f172a" stroke-width="1"/>
-    <path d="M120 210H1080" stroke="#0f172a" stroke-width="1"/>
-    <path d="M120 256H1080" stroke="#0f172a" stroke-width="1"/>
+  <g opacity="0.22">
+    <path d="M80 84H1120" stroke="#38bdf8"/>
+    <path d="M80 336H1120" stroke="#38bdf8"/>
+    <path d="M150 42V378" stroke="#0ea5e9"/>
+    <path d="M1050 42V378" stroke="#0ea5e9"/>
   </g>
 
-  <g opacity="0.9">
-    <path d="M72 58H170" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M72 58V132" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M1128 58H1030" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M1128 58V132" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M72 302H170" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M72 302V228" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M1128 302H1030" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M1128 302V228" stroke="#38bdf8" stroke-width="2"/>
+  <g class="twinkleA">
+    <circle cx="146" cy="98" r="2" fill="#e0f2fe"/>
+    <circle cx="262" cy="318" r="2.5" fill="#67e8f9"/>
+    <circle cx="482" cy="72" r="2" fill="#e0f2fe"/>
+    <circle cx="663" cy="355" r="2" fill="#7dd3fc"/>
+    <circle cx="1036" cy="118" r="2.5" fill="#f8fafc"/>
+  </g>
+  <g class="twinkleB">
+    <circle cx="218" cy="152" r="1.8" fill="#f8fafc"/>
+    <circle cx="386" cy="278" r="2.2" fill="#38bdf8"/>
+    <circle cx="578" cy="112" r="1.8" fill="#e0f2fe"/>
+    <circle cx="744" cy="263" r="2.1" fill="#22d3ee"/>
+    <circle cx="1110" cy="294" r="2.4" fill="#bae6fd"/>
   </g>
 
   <g class="scan">
-    <rect x="360" y="78" width="480" height="2" fill="url(#line)"/>
-    <rect x="395" y="284" width="410" height="2" fill="url(#line)"/>
+    <rect x="260" y="98" width="680" height="2" fill="url(#scanLine)"/>
+    <rect x="300" y="322" width="600" height="2" fill="url(#scanLine)"/>
   </g>
 
-  <text x="600" y="116" text-anchor="middle" class="tiny">SYSTEMS ENGINEERING</text>
-  <text x="600" y="194" text-anchor="middle" class="title">ANA MONTES</text>
-  <text x="600" y="240" text-anchor="middle" class="subtitle">DEVELOPER  |  DATABASES  |  WEB</text>
-  <text x="600" y="286" text-anchor="middle" class="tiny">building projects for portfolio and CV <tspan class="blink">_</tspan></text>
+  <g class="float">
+    <text x="418" y="138" class="tiny">&lt; SYSTEMS ENGINEERING / WEB / DATABASES &gt;</text>
+    <text x="418" y="210" class="title">ANA MONTES</text>
+    <text x="418" y="256" class="subtitle">FRONTEND + BACKEND</text>
+    <text x="418" y="298" class="tiny">building elegant technology projects <tspan class="blink">_</tspan></text>
+  </g>
+
+  <g transform="translate(935 210)">
+    <circle r="88" fill="url(#planet)" opacity="0.95"/>
+    <circle r="88" stroke="#7dd3fc" stroke-opacity="0.65" stroke-width="2"/>
+    <path d="M-72 -16C-42 -34 -3 -37 34 -23C7 -7 -29 5 -72 -16Z" fill="#064e3b" opacity=".75"/>
+    <path d="M-18 36C22 18 54 24 72 48C40 61 7 58 -18 36Z" fill="#115e59" opacity=".82"/>
+    <path d="M-36 -62C-4 -70 25 -62 48 -40C18 -35 -10 -41 -36 -62Z" fill="#0f766e" opacity=".72"/>
+  </g>
+  <g class="orbit">
+    <ellipse cx="935" cy="210" rx="143" ry="44" stroke="#38bdf8" stroke-opacity=".65" stroke-width="2"/>
+    <circle cx="1078" cy="210" r="6" fill="#67e8f9" filter="url(#glow)"/>
+  </g>
+  <g class="orbitReverse">
+    <ellipse cx="935" cy="210" rx="174" ry="58" stroke="#22d3ee" stroke-opacity=".32" stroke-width="2"/>
+    <circle cx="761" cy="210" r="4" fill="#e0f2fe" filter="url(#glow)"/>
+  </g>
 
   <g class="pulse">
-    <circle cx="211" cy="105" r="4" fill="#22d3ee"/>
-    <circle cx="1000" cy="105" r="4" fill="#22d3ee"/>
-    <circle cx="238" cy="268" r="3" fill="#38bdf8"/>
-    <circle cx="968" cy="268" r="3" fill="#38bdf8"/>
+    <path d="M58 58H174M58 58V132" stroke="#38bdf8" stroke-width="3"/>
+    <path d="M1142 58H1026M1142 58V132" stroke="#38bdf8" stroke-width="3"/>
+    <path d="M58 362H174M58 362V288" stroke="#38bdf8" stroke-width="3"/>
+    <path d="M1142 362H1026M1142 362V288" stroke="#38bdf8" stroke-width="3"/>
   </g>
 </svg>

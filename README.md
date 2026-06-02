@@ -2,11 +2,11 @@
   <img src="./assets/profile-banner.svg" alt="Profile Banner" width="100%" />
 </p>
 
-<h2 align="center">Hola, soy Ana Montes</h2>
+<h2 align="center">Welcome to my developer space</h2>
 
 <p align="center">
   <a href="https://github.com/user-ana">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2600&pause=900&color=38BDF8&center=true&vCenter=true&width=760&lines=Estudiante+de+Ingenieria+en+Sistemas;Frontend+%7C+Backend+%7C+Bases+de+datos;Creando+proyectos+para+portafolio+y+CV;Aprendiendo%2C+mejorando+y+construyendo" alt="Typing animation" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2600&pause=900&color=67E8F9&center=true&vCenter=true&width=860&lines=Systems+Engineering+Student;Frontend+%2B+Backend+%2B+Databases;Designing+clean+and+functional+interfaces;Building+a+professional+tech+portfolio" alt="Typing animation" />
   </a>
 </p>
 
@@ -14,11 +14,12 @@
   <img src="https://komarev.com/ghpvc/?username=user-ana&label=PROFILE%20VIEWS&color=0ea5e9&style=for-the-badge" />
   <img src="https://img.shields.io/badge/SYSTEMS%20ENGINEERING-020617?style=for-the-badge&logo=github&logoColor=38bdf8" />
   <img src="https://img.shields.io/badge/FRONTEND%20%2B%20BACKEND-0f172a?style=for-the-badge&logo=rocket&logoColor=22d3ee" />
+  <img src="https://img.shields.io/badge/ELEGANT%20TECH-020617?style=for-the-badge&logo=sparkles&logoColor=67e8f9" />
 </p>
 
 ---
 
-## [ WHOAMI ]
+## [ IDENTITY ]
 
 <p align="center">
   <img src="./assets/terminal-card.svg" alt="Terminal profile card" width="92%" />
@@ -37,7 +38,11 @@ Objetivo     : Crear proyectos bonitos, funcionales y listos para CV
 
 ---
 
-## [ TECH STACK ]
+## [ TECH CONSOLE ]
+
+<p align="center">
+  <img src="./assets/tech-console.svg" alt="Tech console" width="92%" />
+</p>
 
 <p align="center">
   <b>Frontend</b>
@@ -80,7 +85,7 @@ Objetivo     : Crear proyectos bonitos, funcionales y listos para CV
 
 ---
 
-## [ FEATURED PROJECT ]
+## [ FEATURED MISSION ]
 
 <table>
   <tr>
@@ -112,7 +117,7 @@ Objetivo     : Crear proyectos bonitos, funcionales y listos para CV
 
 ---
 
-## [ PROJECTS ]
+## [ PROJECT PREVIEW ]
 
 <p align="center">
   <a href="https://github.com/user-ana/alta-disponibilidad-vip">

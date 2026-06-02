@@ -1,0 +1,45 @@
+<svg width="1000" height="260" viewBox="0 0 1000 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1000" y2="260">
+      <stop stop-color="#020617"/>
+      <stop offset=".52" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .mono { font-family: "Consolas", "Courier New", monospace; }
+      .label { fill:#67e8f9; font-size:18px; font-weight:700; letter-spacing:2px; }
+      .text { fill:#cbd5e1; font-size:17px; }
+      .chip { fill:#111827; stroke:#1e293b; }
+      .scan { animation: scan 4s ease-in-out infinite; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; }
+      @keyframes scan { 0%,100% { transform: translateX(-260px); opacity:0; } 45%,55% { opacity:1; } 50% { transform: translateX(260px); } }
+      @keyframes pulse { 0%,100% { opacity:.42; } 50% { opacity:1; } }
+    </style>
+  </defs>
+  <rect width="1000" height="260" rx="22" fill="url(#panel)"/>
+  <rect x="1" y="1" width="998" height="258" rx="21" stroke="#1e293b" stroke-width="2"/>
+  <g class="scan">
+    <rect x="230" y="45" width="540" height="2" fill="#22d3ee" opacity=".75"/>
+    <rect x="270" y="214" width="460" height="2" fill="#38bdf8" opacity=".65"/>
+  </g>
+  <text x="48" y="54" class="mono label">TECH CONSOLE</text>
+  <text x="48" y="91" class="mono text">Frontend: HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind</text>
+  <text x="48" y="124" class="mono text">Backend : Python, Java, C#, Node.js, Express, .NET, PHP</text>
+  <text x="48" y="157" class="mono text">Data    : MySQL, PostgreSQL, MongoDB, SQLite</text>
+  <text x="48" y="190" class="mono text">Tools   : Git, GitHub, VS Code, Postman, Docker, Linux</text>
+  <g class="pulse">
+    <rect x="745" y="68" width="178" height="42" rx="12" class="chip"/>
+    <text x="772" y="95" class="mono label" font-size="14">BUILDING</text>
+    <rect x="745" y="126" width="178" height="42" rx="12" class="chip"/>
+    <text x="780" y="153" class="mono label" font-size="14">LEARNING</text>
+    <rect x="745" y="184" width="178" height="42" rx="12" class="chip"/>
+    <text x="774" y="211" class="mono label" font-size="14">PORTFOLIO</text>
+  </g>
+</svg>
