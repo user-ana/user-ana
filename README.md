@@ -104,7 +104,7 @@ Objetivo     : Crear proyectos bonitos, funcionales y listos para CV
     </td>
     <td width="42%">
       <a href="https://user-ana.github.io/alta-disponibilidad-vip/">
-        <img src="https://raw.githubusercontent.com/user-ana/alta-disponibilidad-vip/main/Evidencias/captura1.png" alt="Dashboard del proyecto VIP" width="100%" />
+        <img src="https://raw.githubusercontent.com/user-ana/alta-disponibilidad-vip/main/Evidencias/login.png" alt="Login del proyecto VIP" width="100%" />
       </a>
     </td>
   </tr>
@@ -117,6 +117,12 @@ Objetivo     : Crear proyectos bonitos, funcionales y listos para CV
 <p align="center">
   <a href="https://github.com/user-ana/alta-disponibilidad-vip">
     <img src="https://raw.githubusercontent.com/user-ana/alta-disponibilidad-vip/main/Evidencias/captura1.png" alt="Alta Disponibilidad VIP" width="80%" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://user-ana.github.io/alta-disponibilidad-vip/">
+    <img src="https://raw.githubusercontent.com/user-ana/alta-disponibilidad-vip/main/Evidencias/login.png" alt="Login Alta Disponibilidad VIP" width="80%" />
   </a>
 </p>
 
