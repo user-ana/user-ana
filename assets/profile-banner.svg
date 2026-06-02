@@ -1,0 +1,115 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#0ea5e9" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1200" y2="0">
+      <stop stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#22d3ee"/>
+      <stop offset="0.55" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .title {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 62px;
+        font-weight: 800;
+        letter-spacing: 8px;
+        fill: #e0f2fe;
+        filter: url(#softGlow);
+      }
+      .subtitle {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 7px;
+        fill: #7dd3fc;
+      }
+      .tiny {
+        font-family: "Consolas", "Courier New", monospace;
+        font-size: 14px;
+        fill: #94a3b8;
+        letter-spacing: 4px;
+      }
+      .scan {
+        animation: scan 5s ease-in-out infinite;
+      }
+      .pulse {
+        animation: pulse 3s ease-in-out infinite;
+      }
+      .float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .blink {
+        animation: blink 1.2s steps(2) infinite;
+      }
+      @keyframes scan {
+        0%, 100% { transform: translateX(-260px); opacity: 0; }
+        20%, 80% { opacity: 1; }
+        50% { transform: translateX(260px); opacity: 0.9; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.45; }
+        50% { opacity: 1; }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes blink {
+        0%, 45% { opacity: 1; }
+        46%, 100% { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="22" fill="#020617"/>
+  <rect x="1" y="1" width="1198" height="358" rx="22" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="260" cy="94" r="180" fill="url(#glowA)" class="float"/>
+  <circle cx="940" cy="250" r="210" fill="url(#glowA)" class="float"/>
+
+  <g opacity="0.28">
+    <path d="M120 72H1080" stroke="#0f172a" stroke-width="1"/>
+    <path d="M120 118H1080" stroke="#0f172a" stroke-width="1"/>
+    <path d="M120 164H1080" stroke="#0f172a" stroke-width="1"/>
+    <path d="M120 210H1080" stroke="#0f172a" stroke-width="1"/>
+    <path d="M120 256H1080" stroke="#0f172a" stroke-width="1"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M72 58H170" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M72 58V132" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M1128 58H1030" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M1128 58V132" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M72 302H170" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M72 302V228" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M1128 302H1030" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M1128 302V228" stroke="#38bdf8" stroke-width="2"/>
+  </g>
+
+  <g class="scan">
+    <rect x="360" y="78" width="480" height="2" fill="url(#line)"/>
+    <rect x="395" y="284" width="410" height="2" fill="url(#line)"/>
+  </g>
+
+  <text x="600" y="116" text-anchor="middle" class="tiny">SYSTEMS ENGINEERING</text>
+  <text x="600" y="194" text-anchor="middle" class="title">ANA MONTES</text>
+  <text x="600" y="240" text-anchor="middle" class="subtitle">DEVELOPER  |  DATABASES  |  WEB</text>
+  <text x="600" y="286" text-anchor="middle" class="tiny">building projects for portfolio and CV <tspan class="blink">_</tspan></text>
+
+  <g class="pulse">
+    <circle cx="211" cy="105" r="4" fill="#22d3ee"/>
+    <circle cx="1000" cy="105" r="4" fill="#22d3ee"/>
+    <circle cx="238" cy="268" r="3" fill="#38bdf8"/>
+    <circle cx="968" cy="268" r="3" fill="#38bdf8"/>
+  </g>
+</svg>
